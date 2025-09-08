@@ -23,7 +23,7 @@
         <geometry>
           <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
         </geometry>
-        <origin xyz="${x} ${y} ${z}" rpy="1.5708 0 0"/>
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
         <material name="black"/>
       </visual>
 
@@ -31,7 +31,7 @@
         <geometry>
           <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
         </geometry>
-        <origin xyz="${x} ${y} ${z}" rpy="1.5708 0 0"/>
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
       </collision>
 
         <inertial>
@@ -74,7 +74,7 @@
           <geometry>
               <cylinder radius="${lidar_radius}" length="${lidar_height}"/>
           </geometry>
-          <origin xyz="0.2 0 0.128"/>
+          <origin xyz="0 0 0"/>
           <material name="red"/>
       </visual>
 
@@ -82,7 +82,7 @@
             <geometry>
                 <cylinder radius="${lidar_radius}" length="${lidar_height}"/>
             </geometry>
-            <origin xyz="0.2 0 0.128"/>
+            <origin xyz="0 0 0"/>
         </collision>
 
         <inertial>
@@ -94,7 +94,7 @@
   <joint name="lidar_joint" type="fixed">
       <parent link="base_link"/>
       <child link="lidar_link"/>
-      <origin xyz="0 0 0.1" rpy="0 0 0"/>
+      <origin xyz="0.2 0 0.128" rpy="0 0 0"/>
   </joint>
 
   <xacro:wheel name="front_left_wheel" x="0.18" y="0.16" z="0.05"/>
