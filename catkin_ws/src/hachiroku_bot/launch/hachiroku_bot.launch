@@ -3,5 +3,13 @@
     
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
     
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="paused" value="false"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+    </include>
+
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hachiroku_bot)/rviz/hachiroku_bot.rviz" />
 </launch>
