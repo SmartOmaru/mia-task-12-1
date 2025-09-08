@@ -146,6 +146,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/ares/git/mia-task-12-1/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/ares/git/mia-task-12-1/catkin_ws/build/hachiroku_bot/cmake_install.cmake")
 
 endif()
 

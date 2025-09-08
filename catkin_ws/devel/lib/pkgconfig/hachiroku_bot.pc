@@ -1,0 +1,8 @@
+prefix=/home/ares/git/mia-task-12-1/catkin_ws/devel
+
+Name: hachiroku_bot
+Description: Description of hachiroku_bot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

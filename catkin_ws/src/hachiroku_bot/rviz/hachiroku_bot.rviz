@@ -64,7 +64,7 @@ Visualization Manager:
         Expand Tree: false
         Link Tree Style: ""
       Name: hachiroku_bot
-      Robot Description: hachiroku_bot
+      Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true

@@ -1,0 +1,4 @@
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro $(find hachiroku_bot)/urdf/hachiroku_bot.xacro"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hachiroku_bot)/rviz/hachiroku_bot.rviz" />
+</launch>
