@@ -1,13 +1,18 @@
 <?xml version="1.0"?>
 
 <robot name="hachiroku_bot" xmlns:xacro="http://ros.org/wiki/xacro">
-    <xacro:property name="base_length"  value="1"/>
-    <xacro:property name="base_width"   value="1"/>
-    <xacro:property name="base_height"  value="1"/>
+
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+
     <xacro:property name="wheel_radius" value="0.05"/>
     <xacro:property name="wheel_length" value="0.02"/>
+    <xacro:property name="base_length"  value="0.5"/>
+    <xacro:property name="base_width"   value="0.3"/>
+    <xacro:property name="base_height"  value="0.1"/>
 
-    <xacro:macro name="wheel" params="name x y z">
+  <xacro:macro name="wheel" params="name x y z">
     <link name="${name}">
       <visual>
         <geometry>
@@ -26,17 +31,19 @@
     </joint>
   </xacro:macro>
 
-    <link name="base_link">
-        <visual>
-            <geometry>
-                <box size="${base_length} ${base_width} ${base_height}"/>
-            </geometry>
-            <origin xyz="0 0 0.1"/>
-        </visual>
-    </link>
+  <link name="base_link">
+      <visual>
+          <geometry>
+              <box size="${base_length} ${base_width} ${base_height}"/>
+          </geometry>
+          <origin xyz="0 0 0.075"/>
+      </visual>
+  </link>
 
-    <xacro:wheel name="front_left_wheel" x="0.3" y="0.2" z="0.1"/>
-    <xacro:wheel name="front_right_wheel" x="0.3" y="-0.2" z="0.1"/>
-    <xacro:wheel name="rear_left_wheel" x="-0.3" y="0.2" z="0.1"/>
-    <xacro:wheel name="rear_right_wheel" x="-0.3" y="-0.2" z="0.1"/>
+
+
+  <xacro:wheel name="front_left_wheel" x="0.18" y="0.16" z="0.05"/>
+  <xacro:wheel name="front_right_wheel" x="0.18" y="-0.16" z="0.05"/>
+  <xacro:wheel name="rear_left_wheel" x="-0.18" y="0.16" z="0.05"/>
+  <xacro:wheel name="rear_right_wheel" x="-0.18" y="-0.16" z="0.05"/>
 </robot>
