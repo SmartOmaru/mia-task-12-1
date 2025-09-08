@@ -11,5 +11,7 @@
         <arg name="debug" value="false"/>
     </include>
 
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model hachiroku_bot" />
+
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hachiroku_bot)/rviz/hachiroku_bot.rviz" />
 </launch>
